@@ -1,0 +1,219 @@
+/* --- Global Resets --- */
+body {
+  background-color: #FAFAFA;
+  color: #333333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #18181b;
+  color: #E4E4E7;
+}
+
+/* --- Logo Styling --- */
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #333333;
+  letter-spacing: -1px;
+}
+
+.logo-text span {
+  color: #EAB308;
+}
+
+.dark-mode .logo-text {
+  color: #E4E4E7;
+}
+
+/* --- Buttons --- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.yellow-btn {
+  background-color: #FDE047;
+  color: #333333;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 2px solid #FDE047;
+  color: #333333;
+  padding: 8px 16px;
+}
+
+.dark-mode .toggle-btn {
+  color: #E4E4E7;
+}
+
+/* --- Inputs --- */
+input[type="text"], input[type="password"] {
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  color: #333333;
+  outline: none;
+}
+
+input:focus {
+  border-color: #FDE047;
+}
+
+.dark-mode input[type="text"], 
+.dark-mode input[type="password"] {
+  background-color: #27272a;
+  color: #E4E4E7;
+  border-color: #3f3f46;
+}
+
+/* --- Auth Page --- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Needed for the absolute positioned button */
+}
+
+.auth-box {
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  width: 350px;
+  text-align: center;
+}
+
+.dark-mode .auth-box {
+  background-color: #27272a;
+}
+
+/* --- Dashboard Navigation --- */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: #ffefef;
+  color: #d32f2f;
+  padding: 8px 16px;
+}
+
+/* --- Content Section --- */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.create-section {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dark-mode .create-section {
+  background-color: #27272a;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark-mode .checkbox-option {
+  color: #A1A1AA;
+}
+
+/* --- Grid & Cards --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.dark-mode .card {
+  background-color: #27272a;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card h3 {
+  margin: 0 0 15px 0;
+  color: #EAB308;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: #000000;
+  text-decoration-thickness: 2px;
+  opacity: 0.5;
+}
+
+.add-item-input {
+  margin-top: 15px;
+  border: none;
+  border-bottom: 2px dashed #ddd;
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.dark-mode .add-item-input {
+  color: #E4E4E7;
+  border-color: #3f3f46;
+}
