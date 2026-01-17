@@ -1,13 +1,13 @@
-# 📝 MellowTodo
+# MellowTodo
 > A minimalist, full-stack task management application designed for focus and clarity.
 
 MellowTodo is built using the **MERN stack**, featuring a secure authentication system and a clean user interface. It allows users to organize their lives without the clutter of traditional productivity apps.
 
-`![Website Screenshot](MellowTodoui.png)`
+![Website Screenshot](MellowTodoui.png)
 
 ---
 
-## ✨ Features
+## Features
 * **Secure Authentication:** JWT-based login and signup system.
 * **Protected Routes:** Unauthorized users are automatically redirected to the login page.
 * **Full CRUD:** Create, Read, Update, and Delete tasks in real-time.
@@ -16,7 +16,7 @@ MellowTodo is built using the **MERN stack**, featuring a secure authentication 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Frontend | Backend | Database |
 | :--- | :--- | :--- |
@@ -26,7 +26,7 @@ MellowTodo is built using the **MERN stack**, featuring a secure authentication 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 * Node.js installed on your machine.
