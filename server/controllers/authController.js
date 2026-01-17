@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs";
 import User from "../models/User.js";
+import jwt from "jsonwebtoken";
 
 export const signup = async (req, res) => {
   const { username, email, password } = req.body; // Ensure 'username' is here
@@ -30,7 +31,7 @@ export const login = async (req, res) => {
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res.status(403).json({ error: "Invalid credentials" });
     }
-    const token = jwt.sign({ id: user._id, username: user.username }, process.env.JWT_SECRET || "secret");
+    const token = jwt.sign({ id: user._id, username: user.username }, "secret");
     res.json({ token, username: user.username });
   } catch (err) { res.status(500).json({ error: "Server error" }); }
 };
