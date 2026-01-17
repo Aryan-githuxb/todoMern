@@ -35,6 +35,7 @@ Clone the repository:
 ```bash
 git clone [https://github.com/your-username/mellow-todo.git](https://github.com/your-username/mellow-todo.git)
 cd mellow-todo
+```
 
 ### 3. Setup Server
 Install the dependencies and start the Back-end server:
@@ -42,6 +43,7 @@ Install the dependencies and start the Back-end server:
 cd server
 npm install
 npm start
+```
 
 ### 4. Setup Client
 Install the dependencies and start the Front-end server:
@@ -50,3 +52,4 @@ Install the dependencies and start the Front-end server:
 cd client
 npm install
 npm run dev
+```
