@@ -3,7 +3,7 @@
 
 MellowTodo is built using the **MERN stack**, featuring a secure authentication system and a clean user interface. It allows users to organize their lives without the clutter of traditional productivity apps.
 
-`![Website Screenshot](todoMern\MellowTodoui.png)`
+`![Website Screenshot](MellowTodoui.png)`
 
 ---
 
