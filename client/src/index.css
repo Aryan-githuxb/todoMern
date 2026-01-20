@@ -1,4 +1,3 @@
-/* --- Global Resets --- */
 body {
   background-color: #FAFAFA;
   color: #333333;
@@ -12,7 +11,6 @@ body {
   color: #E4E4E7;
 }
 
-/* --- Logo Styling --- */
 .logo-text {
   font-size: 1.8rem;
   font-weight: 800;
@@ -28,7 +26,6 @@ body {
   color: #E4E4E7;
 }
 
-/* --- Buttons --- */
 button {
   cursor: pointer;
   border: none;
@@ -61,7 +58,6 @@ button:active {
   color: #E4E4E7;
 }
 
-/* --- Inputs --- */
 input[type="text"], input[type="password"] {
   border: 2px solid #ddd;
   border-radius: 20px;
@@ -84,13 +80,12 @@ input:focus {
   border-color: #3f3f46;
 }
 
-/* --- Auth Page --- */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative; /* Needed for the absolute positioned button */
+  position: relative;
 }
 
 .auth-box {
@@ -106,7 +101,6 @@ input:focus {
   background-color: #27272a;
 }
 
-/* --- Dashboard Navigation --- */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -130,7 +124,6 @@ input:focus {
   padding: 8px 16px;
 }
 
-/* --- Content Section --- */
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -164,7 +157,6 @@ input:focus {
   color: #A1A1AA;
 }
 
-/* --- Grid & Cards --- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

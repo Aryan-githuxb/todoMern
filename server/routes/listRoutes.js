@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 
 const router = express.Router();
 
-// Middleware inside the route file for protection
 const verifyToken = (req, res, next) => {
   const token = req.headers["authorization"];
   if (!token) return res.sendStatus(403);

@@ -14,33 +14,33 @@ export default function DashboardPage({ token, setToken, darkMode, setDarkMode }
 
   const fetchLists = async () => {
     try {
-      const { data } = await axios.get("/lists", { headers });
+      const { data } = await axios.get("http://localhost:5000/lists", { headers });
       setLists(data);
     } catch (err) { if (err.response?.status === 403) logout(); }
   };
 
   const createList = async () => {
     if (!newListTitle.trim()) return;
-    await axios.post("/lists", { title: newListTitle, type: isChecklist ? "checklist" : "simple" }, { headers });
+    await axios.post("http://localhost:5000/lists", { title: newListTitle, type: isChecklist ? "checklist" : "simple" }, { headers });
     setNewListTitle("");
     fetchLists();
   };
 
   const deleteList = async (id) => {
-    await axios.delete(`/lists/${id}`, { headers });
+    await axios.delete(`http://localhost:5000/lists/${id}`, { headers });
     fetchLists();
   };
 
   const addItem = async (listId, listItems, text) => {
     const newItems = [...listItems, { text, completed: false }];
-    await axios.put(`/lists/${listId}`, { items: newItems }, { headers });
+    await axios.put(`http://localhost:5000/lists/${listId}`, { items: newItems }, { headers });
     fetchLists();
   };
 
   const toggleItem = async (listId, listItems, itemIndex) => {
     const newItems = [...listItems];
     newItems[itemIndex].completed = !newItems[itemIndex].completed;
-    await axios.put(`/lists/${listId}`, { items: newItems }, { headers });
+    await axios.put(`http://localhost:5000/lists/${listId}`, { items: newItems }, { headers });
     fetchLists();
   };
 

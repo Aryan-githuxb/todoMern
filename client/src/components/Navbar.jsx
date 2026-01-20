@@ -6,7 +6,7 @@ export default function Navbar({ username, darkMode, setDarkMode, onLogout }) {
       <Logo />
       <div className="nav-right">
         <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "☀️ Light" : "🌙 Dark"}
+          {darkMode ? " Light" : " Dark"}
         </button>
         <span className="user-info">Hi, {username}</span>
         <button className="logout-btn" onClick={onLogout}>Logout</button>

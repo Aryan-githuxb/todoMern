@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import Logo from "../components/Logo";
-axios.defaults.baseURL = "http://localhost:5000";
 
 export default function AuthPage({ setToken, darkMode, setDarkMode }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -15,22 +14,18 @@ export default function AuthPage({ setToken, darkMode, setDarkMode }) {
     setMessage({ text: "", type: "" });
 
     try {
-      // isLoginPage
       if (isLogin) {
-        // LOGIN
-        const { data } = await axios.post("/auth/login", { email, password });
+        const { data } = await axios.post("http://localhost:5000/auth/login", { email, password });
         localStorage.setItem("token", data.token);
         localStorage.setItem("username", data.username);
         setToken(data.token);
       } else {
-        // SIGNUP - Ensure 'username' is being sent!
-        await axios.post("/auth/signup", { username, email, password });
+        await axios.post("http://localhost:5000/auth/signup", { username, email, password });
         setIsLogin(true);
         setUsername(""); setEmail(""); setPassword("");
         setMessage({ text: "Account created! Please login.", type: "success" });
       }
     } catch (err) {
-      // If it says "Invalid Credentials" here, it's likely hitting the login route by mistake
       setMessage({ text: err.response?.data?.error || "Connection error", type: "error" });
     }
   };
@@ -39,7 +34,7 @@ export default function AuthPage({ setToken, darkMode, setDarkMode }) {
     <div className="auth-container">
       <div style={{ position: "absolute", top: "20px", right: "40px" }}>
         <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "☀️ Light" : "🌙 Dark"}
+          {darkMode ? " Light" : " Dark"}
         </button>
       </div>
       <form className="auth-box" onSubmit={handleSubmit}>
